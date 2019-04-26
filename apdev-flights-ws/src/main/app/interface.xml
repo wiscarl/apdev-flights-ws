@@ -5,8 +5,8 @@ http://www.mulesoft.org/schema/mule/apikit http://www.mulesoft.org/schema/mule/a
 http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd">
     <apikit:config name="mua-flights-api-config" raml="mua-flights-api.raml" consoleEnabled="false" doc:name="Router"/>
     <flow name="mua-flights-api-main">
-        <http:listener config-ref="HTTP_Listener_Configuration" path="/api/*" doc:name="HTTP" doc:description="RA laptop studio notes 4/24 5:33pm"/>
-        <apikit:router config-ref="mua-flights-api-config" doc:name="APIkit Router" doc:description="RA laptop studio notes 4/24 5:33pm"/>
+        <http:listener config-ref="HTTP_Listener_Configuration" path="/api/*" doc:name="HTTP" doc:description="RA laptop studio notes 4/26 4:20pm"/>
+        <apikit:router config-ref="mua-flights-api-config" doc:name="APIkit Router" doc:description="RA laptop studio notes 4/26 4:20pm"/>
         <exception-strategy ref="mua-flights-api-apiKitGlobalExceptionMapping" doc:name="Reference Exception Strategy" doc:description="RA laptop studio notes 4/24 5:33pm"/>
     </flow>
     <flow name="mua-flights-api-console">
