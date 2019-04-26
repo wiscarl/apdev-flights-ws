@@ -5,13 +5,13 @@ http://www.mulesoft.org/schema/mule/apikit http://www.mulesoft.org/schema/mule/a
 http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd">
     <apikit:config name="mua-flights-api-config" raml="mua-flights-api.raml" consoleEnabled="false" doc:name="Router"/>
     <flow name="mua-flights-api-main">
-        <http:listener config-ref="HTTP_Listener_Configuration" path="/api/*" doc:name="HTTP" doc:description="my notes Carl 4/22 kkkkkkkkkkkkkkkkkkkkkkkkkkk"/>
-        <apikit:router config-ref="mua-flights-api-config" doc:name="APIkit Router" doc:description="notes 4/22"/>
-        <exception-strategy ref="mua-flights-api-apiKitGlobalExceptionMapping" doc:name="Reference Exception Strategy" doc:description="Notes............"/>
+        <http:listener config-ref="HTTP_Listener_Configuration" path="/api/*" doc:name="HTTP" doc:description="RA laptop studio notes 4/24 5:33pm"/>
+        <apikit:router config-ref="mua-flights-api-config" doc:name="APIkit Router" doc:description="RA laptop studio notes 4/24 5:33pm"/>
+        <exception-strategy ref="mua-flights-api-apiKitGlobalExceptionMapping" doc:name="Reference Exception Strategy" doc:description="RA laptop studio notes 4/24 5:33pm"/>
     </flow>
     <flow name="mua-flights-api-console">
-        <http:listener config-ref="HTTP_Listener_Configuration" path="/console/*" doc:name="HTTP" doc:description="Notes......................................................................"/>
-        <apikit:console config-ref="mua-flights-api-config" doc:name="APIkit Console" doc:description="Notes"/>
+        <http:listener config-ref="HTTP_Listener_Configuration" path="/console/*" doc:name="HTTP" doc:description="RA laptop studio notes 4/24 5:33pm"/>
+        <apikit:console config-ref="mua-flights-api-config" doc:name="APIkit Console" doc:description="RA laptop studio notes 4/24 5:33pm"/>
     </flow>
     <flow name="get:/flights:mua-flights-api-config">
         <set-payload value="[&#xA;{&#xA;&quot;airline&quot; : &quot;United&quot;,&#xA;&quot;flightCode&quot; : &quot;ER38sd&quot;,&#xA;&quot;fromAirportCode&quot; : &quot;LAX&quot;,&#xA;&quot;toAirportCode&quot; : &quot;SFO&quot;,&#xA;&quot;departureDate&quot; : &quot;May 21, 2016&quot;,&#xA;&quot;emptySeats&quot; : 0,&#xA;&quot;totalSeats&quot; : 200,&#xA;&quot;price&quot; : 199,&#xA;&quot;planeType&quot; : &quot;Boeing 737&quot;&#xA;},&#xA;{&#xA;&quot;airline&quot; : &quot;Delta&quot;,&#xA;&quot;flightCode&quot; : &quot;ER0945&quot;,&#xA;&quot;fromAirportCode&quot; : &quot;PDX&quot;,&#xA;&quot;toAirportCode&quot; : &quot;CLE&quot;,&#xA;&quot;departureDate&quot; : &quot;June 1, 2016&quot;,&#xA;&quot;emptySeats&quot; : 24,&#xA;&quot;totalSeats&quot; : 350,&#xA;&quot;price&quot; : 450,&#xA;&quot;planeType&quot; : &quot;Boeing 747&quot;&#xA;}&#xA;]" doc:name="Set Payload"/>
