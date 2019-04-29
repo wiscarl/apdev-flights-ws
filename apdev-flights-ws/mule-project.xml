@@ -2,4 +2,5 @@
 <mule-project xmlns="http://www.mulesoft.com/tooling/project" runtimeId="org.mule.tooling.server.3.9.1.ee" schemaVersion="5.3.0.0">
     <name>apdev-flights-ws</name>
     <description></description>
+    
 </mule-project>
