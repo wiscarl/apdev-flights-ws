@@ -6,9 +6,12 @@ http://www.springframework.org/schema/beans http://www.springframework.org/schem
     <apikit:config name="mua-flights-api-config" raml="mua-flights-api.raml" consoleEnabled="false" doc:name="Router"/>
     <flow name="mua-flights-api-main">
         <http:listener config-ref="HTTP_Listener_Configuration" path="/api/*" doc:name="HTTP" doc:description="Home pc studio notes 4/26 9:30pm
+RA laptop notes 4/30 
+more ra laptop notes"/>
+        <apikit:router config-ref="mua-flights-api-config" doc:name="APIkit Router" doc:description="Home pc studio notes 4/26 9:30pm
 RA laptop notes 4/30 "/>
-        <apikit:router config-ref="mua-flights-api-config" doc:name="APIkit Router" doc:description="Home pc studio notes 4/26 9:30pm"/>
-        <exception-strategy ref="mua-flights-api-apiKitGlobalExceptionMapping" doc:name="Reference Exception Strategy" doc:description="RA laptop studio notes 4/24 5:33pm"/>
+        <exception-strategy ref="mua-flights-api-apiKitGlobalExceptionMapping" doc:name="Reference Exception Strategy" doc:description="RA laptop studio notes 4/24 5:33pm
+RA laptop notes 4/30 "/>
     </flow>
     <flow name="mua-flights-api-console">
         <http:listener config-ref="HTTP_Listener_Configuration" path="/console/*" doc:name="HTTP" doc:description="RA laptop studio notes 4/24 5:33pm"/>
